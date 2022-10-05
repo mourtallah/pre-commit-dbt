@@ -15,6 +15,10 @@ RUN apt-get update &&\
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     rm -rf /work
 
-WORKDIR /github/workspace
+RUN ls
+
+WORKDIR /github/workspace/dbt
+
+RUN ls
 
 ENTRYPOINT [ "pre-commit" ]
