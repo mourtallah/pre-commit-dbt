@@ -15,10 +15,10 @@ RUN apt-get update &&\
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     rm -rf /work
 
-RUN ls
+RUN ls | cat
 
 WORKDIR /github/workspace/dbt
 
-RUN ls
+RUN ls | cat
 
 ENTRYPOINT [ "pre-commit" ]
